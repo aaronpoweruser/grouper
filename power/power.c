@@ -35,7 +35,7 @@ static int boost_warned;
 
 /* initialize to something safe */
 static char screen_off_max_freq[MAX_BUF_SZ] = "700000";
-static char scaling_max_freq[MAX_BUF_SZ] = "1500000";
+static char scaling_max_freq[MAX_BUF_SZ] = "1300000";
 
 int sysfs_read(const char *path, char *buf, size_t size)
 {

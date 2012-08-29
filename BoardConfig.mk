@@ -46,8 +46,9 @@ TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 ARCH_ARM_HAVE_TLS_REGISTER := true
 ARCH_ARM_USE_NON_NEON_MEMCPY := true
-
+TARGET_USE_LINARO_STRING_ROUTINES := true
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a9) $(call cc-option,-mcpu=cortex-a9)
 
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 681574400
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 6567231488
@@ -69,6 +70,8 @@ WIFI_DRIVER_FW_PATH_P2P     := "/vendor/firmware/fw_bcmdhd_p2p.bin"
 TARGET_BOOTLOADER_BOARD_NAME := grouper
 TARGET_BOARD_INFO_FILE := device/asus/grouper/board-info.txt
 
+TARGET_NO_BOOTLOADER := true
+
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_ALSA_AUDIO := false
 
@@ -89,5 +92,7 @@ endif
 # Avoid the generation of ldrcc instructions
 NEED_WORKAROUND_CORTEX_A9_745320 := true
 
+BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_UI_LIB := librecovery_ui_grouper
 TARGET_RELEASETOOLS_EXTENSIONS := device/asus/grouper
+
