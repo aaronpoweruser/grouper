@@ -48,7 +48,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 ARCH_ARM_USE_NON_NEON_MEMCPY := true
 TARGET_USE_LINARO_STRING_ROUTINES := true
 TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a9) $(call cc-option,-mcpu=cortex-a9)
+
 
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 681574400
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 6567231488
@@ -95,4 +95,5 @@ NEED_WORKAROUND_CORTEX_A9_745320 := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_UI_LIB := librecovery_ui_grouper
 TARGET_RELEASETOOLS_EXTENSIONS := device/asus/grouper
+TARGET_EXTRA_CFLAGS := $(call cc-ifversion, -ge, 46, $(call cc-option,-mtune=cortex-a9,$(call cc-option,-mtune=cortex-a8)) $(call cc-option,-mcpu=cortex-a9,$(call cc-option,-mcpu=cortex-a8)))
 
