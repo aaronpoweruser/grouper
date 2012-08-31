@@ -20,10 +20,10 @@ else
   LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
-#PRODUCT_AAPT_CONFIG := normal large tvdpi hdpi
-#PRODUCT_AAPT_PREF_CONFIG := tvdpi
-PRODUCT_AAPT_CONFIG := normal mdpi
-PRODUCT_AAPT_PREF_CONFIG := mdpi
+PRODUCT_AAPT_CONFIG := normal large tvdpi hdpi
+PRODUCT_AAPT_PREF_CONFIG := tvdpi
+#PRODUCT_AAPT_CONFIG := normal mdpi
+#PRODUCT_AAPT_PREF_CONFIG := mdpi
 
 DEVICE_PACKAGE_OVERLAYS := \
     device/asus/grouper/overlay
