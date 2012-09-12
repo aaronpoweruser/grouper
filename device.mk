@@ -30,7 +30,7 @@ DEVICE_PACKAGE_OVERLAYS := \
 
 PRODUCT_PROPERTY_OVERRIDES := \
     wifi.interface=wlan0 \
-    wifi.supplicant_scan_interval=15 \
+    wifi.supplicant_scan_interval=60 \
     tf.enable=y \
     drm.service.enabled=true \
     ro.carrier=wifi-only
