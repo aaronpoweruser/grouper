@@ -94,9 +94,8 @@ PRODUCT_PACKAGES := \
     l2ping \
     hcitool \
     bttest \
-    com.android.future.usb.accessory \
-    whisperd \
-    CameraLauncher \
+    com.android.future.usb.accessory 
+
 
 # for bugmailer
 PRODUCT_PACKAGES += send_bug
